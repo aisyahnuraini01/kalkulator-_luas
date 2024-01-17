@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Luas Persegi Panjang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #00aa66; /* Warna latar belakang hijau */
+            color: #fff; /* Warna teks putih */
+        }
+        h1 {
+            color: #fff;
+        }
+        label {
+            font-weight: bold;
+            margin: 10px;
+        }
+        input {
+            padding: 8px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #hasilLuas {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        #header {
+            background-color: #009933; /* Warna latar belakang hijau gelap */
+            padding: 10px;
+            position: relative;
+            color: #fff;
+        }
+        #scrollingText {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #009933;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <marquee id="scrollingText" behavior="scroll" direction="left">TEKNIK SIPIL UNISMA</marquee>
+    </div>
+    <h1>Kalkulator Luas Persegi Panjang</h1>
+    <label for="panjang">Panjang:</label>
+    <input type="number" id="panjang" placeholder="Masukkan panjang">
+    <br>
+    <label for="lebar">Lebar:</label>
+    <input type="number" id="lebar" placeholder="Masukkan lebar">
+    <br>
+    <button onclick="hitungLuas()">Hitung</button>
+    <p id="hasilLuas"></p>
+
+    <script>
+        function hitungLuas() {
+            var panjang = parseFloat(document.getElementById("panjang").value);
+            var lebar = parseFloat(document.getElementById("lebar").value);
+            var luas = panjang * lebar;
+            document.getElementById("hasilLuas").innerHTML = "Luas Persegi Panjang adalah: " + luas;
+        }
+    </script>
+</body>
+</html>
